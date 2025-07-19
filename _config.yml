@@ -4,7 +4,7 @@ description: >-
   我的个人技术博客，分享编程、技术和生活经验。
 # 让GitHub Pages自动确定baseurl
 baseurl: "" 
-url: "https://morningstar97.github.io" # GitHub Pages URL
+url: "https://www.huangsa-ai.xyz" # 自定义域名URL
 twitter_username: 
 github_username: MorningStar97
 
