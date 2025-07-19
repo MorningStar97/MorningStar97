@@ -6,12 +6,26 @@ on:
   pull_request:
     branches: [ "main" ]
 
+# 设置GITHUB_TOKEN权限
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# 允许一次部署
+concurrency:
+  group: "pages"
+  cancel-in-progress: true
+
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
 
+      - name: 设置Pages
+        uses: actions/configure-pages@v4
+        
       - name: 设置Ruby
         uses: ruby/setup-ruby@v1
         with:
@@ -35,10 +49,6 @@ jobs:
 
   deploy:
     needs: build
-    if: github.ref == 'refs/heads/main'
-    permissions:
-      pages: write
-      id-token: write
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
