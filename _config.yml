@@ -2,8 +2,8 @@ title: 我的个人博客
 email: your-email@example.com
 description: >-
   我的个人技术博客，分享编程、技术和生活经验。
-baseurl: "/huangsa.github.io" # 如果是项目站点，例如 "/blog"
-url: "https://morningstar97.github.io" # 你的GitHub Pages URL，如 "https://username.github.io"
+baseurl: "/MorningStar97" # 项目站点的路径
+url: "https://morningstar97.github.io" # GitHub Pages URL
 twitter_username: 
 github_username: MorningStar97
 
