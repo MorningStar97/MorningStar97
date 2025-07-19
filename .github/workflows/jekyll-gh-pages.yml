@@ -29,7 +29,7 @@ jobs:
           JEKYLL_ENV: production
 
       - name: 上传构建文件
-        uses: actions/upload-pages-artifact@v2
+        uses: actions/upload-pages-artifact@v3
         with:
           path: "_site/"
 
@@ -46,4 +46,4 @@ jobs:
     steps:
       - name: 部署到GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v2 
+        uses: actions/deploy-pages@v3 
